@@ -50,28 +50,7 @@ def part2(puzzle):
     score = 0
     for play in puzzle:
         action1, action2 = P1[play[0]], P2[play[2]]
-
-        if action1 == action2:
-            score += action_score(action1, play[2])
-
-        if action1 == "Rock" and action2 == "Paper":
-            score += action_score(action1, play[2])
-
-        if action1 == "Paper" and action2 == "Rock":
-            score += action_score(action1, play[2])
-
-        if action1 == "Scissors" and action2 == "Rock":
-            score += action_score(action1, play[2])
-
-        if action1 == "Rock" and action2 == "Scissors":
-            score += action_score(action1, play[2])
-
-        if action1 == "Paper" and action2 == "Scissors":
-            score += action_score(action1, play[2])
-
-        if action1 == "Scissors" and action2 == "Paper":
-            score += action_score(action1, play[2])
-
+        score += action_score(action1, play[2])
     return score
 
 
